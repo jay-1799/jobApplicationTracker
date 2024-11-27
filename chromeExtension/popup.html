@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Job Application Tracker</h1>
+    <form id="jobForm">
+      <label for="position">Position:</label>
+      <input type="text" id="position" name="position" required />
+
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company" required />
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" />
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea>
+
+      <button type="button" id="autoFillButton">Auto-fill from Page</button>
+      <button type="submit">Save</button>
+    </form>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+EDUCATION                                                           
+JAY PATEL 
+Atlanta, GA | patelj1799@gmail.com | (862) 766-4504 | LinkedIn | GitHub | Website 
+Stevens Institute of Technology, Hoboken, NJ                                    
+Master of Science – Computer Science GPA: 3.71/4.0 
+Gujarat Technological University, Gujarat                                                   
+Bachelor of Engineering – Computer Engineering GPA: 8.39/10.00 
+SKILLS                                                                                                                                                                                              
+August 2022- May 2024 
+August 2017- July 2021              
+Programming Languages & Frameworks: Python, JavaScript, SQL, Golang, C#, .NET, Django, Node.js, React.js 
+Software and Tools: Amazon Web Services, Azure, Git, Docker, Shell Scripting, Terraform, Jenkins, Ansible, Kubernetes, Postman, 
+PostgreSQL, GitHub Actions, GitLab 
+Technical Skills: DevOps, Cloud Computing, Infrastructure Management, Data Engineering and Mining, Web development 
+Certifications: AWS Certified SysOps Administrator – Associate, HashiCorp Certified: Terraform Associate (003), Azure Developer 
+Associate (AZ-204), Azure Data Fundamentals (DP-900), MLOps Specialization, AWS Cloud Support Associate 
+WORK EXPERIENCE 
+Fresh Gravity, Pune, India                                  
+Analyst 
+● Led a Cloud Cost Optimization initiative, reducing expenses by 25% 
+December 2021 – June 2022 
+● Developed Python Lambda functions using Boto3 for automated AWS resource cleanup, integrating AWS CloudWatch Logs for 
+real-time monitoring and analysis of cleanup processes 
+● Actively managed, improved, and monitored cloud infrastructure on AWS, including EC2, S3, and RDS, ensuring backups, 
+patches, and scaling were efficiently handled 
+● Developed a functionality to push messages to multiple third-party applications using AWS Lambda 
+● Migrated applications and associated databases from on-premise to AWS, reducing costs by 50% 
+● Developed Docker images from scratch, customized base images from existing configurations and maintained image repositories 
+● Implemented Terraform modules and scripts to automate provisioning of cloud resources in AWS environments for blue/green 
+deployments, achieving a 45% reduction in provisioning time 
+Tecnoprism, Vadodara, India                   
+Associate Software Engineer  
+June 2021 – December 2021 
+● Spearheaded the development and deployment of software bots using Automation Anywhere A360 , automating complex 
+business processes and reducing processing time by 30% while decreasing error rates by 50% 
+● Led RPA initiatives, including automating invoice processing, increasing efficiency by 40% and cutting errors by 60%, and 
+implementing an SAP bot for a pharmaceutical company, reducing processing time by 25% and inventory discrepancies by 70% 
+● Created virtual BOTs using Automation Anywhere for efficient automation of software applications and process optimization 
+● Collaborated with stakeholders to analyze business processes, designed automation solutions using RPA tools, and integrated 
+APIs to streamline workflows 
+ACADEMIC PROJECTS  
+Magicdot Solar 
+● Developed a comprehensive web application for Magicdot Solar, a solar energy solutions company. Leveraged a modern tech 
+stack (Node.js, Express.js, MongoDB, Tailwind CSS) to create user-friendly dashboards for both employees and customers 
+● The application streamlines solar energy operations by encompassing functionalities such as task handling, customer support, 
+sales, contract management, photo upload, emergency support, solar panel maintenance, and crew task management 
+● Orchestrated a robust CI/CD pipeline using Jenkins Declarative Pipeline, ensuring efficient development and deployment 
+● Designed and implemented various CI/CD stages, including automated builds, static code analysis for quality assurance 
+(SonarQube), Docker image creation, and deployment to Kubernetes (AWS EKS) 
+● Leveraged ArgoCD for continuous delivery, automating deployments and maintaining consistency across environments 
+● Enhanced system visibility by configuring Prometheus and Grafana to monitor the Kubernetes cluster and Jenkins instance 
+● Employed Infrastructure as Code (Terraform) to automate infrastructure creation and provisioning on AWS 
+AWSDriftGuard 
+● Created a CLI-based tool using Python to detect drift between AWS infrastructure and Terraform state files 
+● Designed a resource-drift detection engine that parses AWS resources (EC2, S3, RDS, IAM Roles, etc.) and compares them with 
+Terraform state files to highlight discrepancies 
+● Integrated Slack API for automated notifications, enabling seamless reporting of drift to relevant teams via Slack channels 
+● Developed a comprehensive drift report generator in Python, providing clear and concise output for detected infrastructure drifts 
+● Optimized tool functionality to be run in both "detect" mode (console output) and "report" mode (Slack integration) 

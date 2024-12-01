@@ -52,3 +52,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document
+  .getElementById("generate-cover-letter")
+  .addEventListener("click", async () => {
+    const position = document.getElementById("position").value;
+    const company = document.getElementById("company").value;
+    const description = document.getElementById("description").value;
+
+    const response = await fetch(
+      "http://localhost:3000/generate-cover-letter",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          jobTitle: position,
+          company,
+          jobDescription: description,
+        }),
+      }
+    );
+
+    const data = await response.json();
+
+    if (response.ok) {
+      document.getElementById("cover-letter-output").innerText =
+        data.coverLetter;
+    } else {
+      alert("Error generating cover letter");
+    }
+  });

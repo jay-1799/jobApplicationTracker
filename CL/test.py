@@ -3,6 +3,8 @@ import openai
 # Set your OpenAI API key
 openai.api_key = ""
 
+
+
 def read_resume_from_txt(file_path):
     """
     Reads the content of a .txt file and returns it as a string.
@@ -17,7 +19,7 @@ def read_resume_from_txt(file_path):
         print("Error reading the text file:", e)
         return ""
 
-def ask_chatgpt(question, model="gpt-4"):
+def ask_chatgpt(question, model="gpt-4o-mini"):
     """
     Sends a question to the OpenAI ChatGPT API and returns the response.
 

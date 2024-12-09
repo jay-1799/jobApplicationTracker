@@ -1,0 +1,33 @@
+FROM public.ecr.aws/lambda/python:3.10
+
+# Install dependencies
+COPY requirements.txt .
+RUN pip3 install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+
+# Copy your Lambda function code
+COPY . ${LAMBDA_TASK_ROOT}
+
+# Specify the handler
+CMD ["lambda_function.lambda_handler"]
+
+
+# # Use Amazon Linux 2 with ARM architecture as base image for AWS Lambda
+# FROM public.ecr.aws/lambda/python:3.8-arm64
+
+# # Install required system packages and dependencies
+# RUN yum install -y gcc libffi-devel
+
+# # Set environment variables
+# ENV API_KEY=your_api_key
+
+# # Set the working directory in the container
+# WORKDIR /var/task
+
+# # Copy your Lambda function files to the container
+# COPY . .
+
+# # Install the required Python libraries
+# RUN pip install --no-cache-dir -r requirements.txt
+
+# # Define the Lambda handler function
+# CMD ["lambda_handler.handler"]

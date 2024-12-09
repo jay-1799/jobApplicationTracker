@@ -5,7 +5,7 @@ const { Client } = require("@notionhq/client");
 const app = express();
 const dotenv = require("dotenv");
 // const { Configuration, OpenAIApi } = require("openai");
-import OpenAI from "openai";
+// import OpenAI from "openai";
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -19,14 +19,14 @@ const notion = new Client({
   auth: process.env.NOTION_INTEGRATION_TOKEN,
 });
 const DATABASE_ID = process.env.NOTION_DATABASE_ID;
-const resumeContent = process.env.RESUME;
+// const resumeContent = process.env.RESUME;
 
 // const configuration = new Configuration({
 //   apiKey: process.env.OPENAI_API_KEY,
 // });
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// const openai = new OpenAI({
+//   apiKey: process.env.OPENAI_API_KEY,
+// });
 // const openai = new OpenAIApi(configuration);
 
 app.post("/add-job", async (req, res) => {
@@ -52,39 +52,39 @@ app.post("/add-job", async (req, res) => {
 });
 
 // Generate Cover Letter Endpoint
-app.post("/generate-cover-letter", async (req, res) => {
-  const { jobTitle, company, jobDescription } = req.body;
+// app.post("/generate-cover-letter", async (req, res) => {
+//   const { jobTitle, company, jobDescription } = req.body;
 
-  const prompt = `
-This is my resume:
-${resumeContent}
+//   const prompt = `
+// This is my resume:
+// ${resumeContent}
 
-Based on this, write a professional cover letter for the position of ${jobTitle} at ${company}. Use the following job description for reference:
-${jobDescription}
-  `;
+// Based on this, write a professional cover letter for the position of ${jobTitle} at ${company}. Use the following job description for reference:
+// ${jobDescription}
+//   `;
 
-  try {
-    // const response = await openai.createCompletion({
-    //   model: "text-davinci-003",
-    //   prompt,
-    //   max_tokens: 500,
-    // });
-    // const coverLetter = response.data.choices[0].text.trim();
-    // res.status(200).json({ coverLetter });
-    const response = await openai.chat.completions.create({
-      model: "gpt-4o-mini", // Use the desired model, e.g., "gpt-3.5-turbo" or "gpt-4"
-      messages: [{ role: "user", content: prompt }],
-    });
+//   try {
+//     // const response = await openai.createCompletion({
+//     //   model: "text-davinci-003",
+//     //   prompt,
+//     //   max_tokens: 500,
+//     // });
+//     // const coverLetter = response.data.choices[0].text.trim();
+//     // res.status(200).json({ coverLetter });
+//     const response = await openai.chat.completions.create({
+//       model: "gpt-4o-mini", // Use the desired model, e.g., "gpt-3.5-turbo" or "gpt-4"
+//       messages: [{ role: "user", content: prompt }],
+//     });
 
-    const coverLetter = response.choices[0].message.content;
+//     const coverLetter = response.choices[0].message.content;
 
-    // Send the generated cover letter as a response
-    res.status(200).json({ coverLetter });
-  } catch (error) {
-    console.error("Error generating cover letter:", error);
-    res.status(500).json({ error: "Failed to generate cover letter" });
-  }
-});
+//     // Send the generated cover letter as a response
+//     res.status(200).json({ coverLetter });
+//   } catch (error) {
+//     console.error("Error generating cover letter:", error);
+//     res.status(500).json({ error: "Failed to generate cover letter" });
+//   }
+// });
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

@@ -2,9 +2,13 @@
   "manifest_version": 3,
   "name": "Job Application Tracker",
   "version": "1.0",
-  "description": "Track job applications and save them to Google Sheets.",
+  "description": "Track job applications and save them to Notion Template, and generates Cover Letter based on the job description and uploads it to docs.google.com .",
   "permissions": ["storage", "scripting", "activeTab"],
-  "host_permissions": ["https://*/*", "http://*/*"],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*",
+    "https://www.googleapis.com/*"
+  ],
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icons/icon16.png"
@@ -22,5 +26,9 @@
       "matches": ["https://*/*", "http://*/*"],
       "js": ["content-script.js"]
     }
-  ]
+  ],
+  "content_security_policy": {
+    "script-src": ["'self'", "https://apis.google.com"],
+    "object-src": ["'self'"]
+  }
 }
